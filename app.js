@@ -1,11 +1,17 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Calculator from './Componentes/Calculadora'; 
+import { Image } from 'react-native';
 
 const LibraryApp = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+      <Image
+    source={require('./assets/OIP.jpg')} // 
+    style={styles.logo} //
+  />
+
         <Text style={styles.headerText}>CALCULADORA</Text>
       </View>
       <View style={styles.content}>
@@ -54,6 +60,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#333',
   },
+
+
+  logo: {
+    width: 50, 
+    height: 50, 
+    resizeMode: 'cover', 
+  },
+
+
+
+
 });
 
 export default LibraryApp;
